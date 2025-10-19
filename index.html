@@ -15,7 +15,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
-            background: #fafafa;
+            background: #f8f9fa;
         }
 
         /* Header */
@@ -27,6 +27,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .header-container {
@@ -41,7 +42,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
-            color: #2563eb;
+            color: #1a1a1a;
             text-decoration: none;
             letter-spacing: -0.5px;
         }
@@ -75,7 +76,8 @@
             top: 50%;
             transform: translateY(-50%);
             color: #6b7280;
-            font-size: 1.2rem;
+            font-size: 0.9rem;
+            pointer-events: none;
         }
 
         .nav-links {
@@ -96,12 +98,12 @@
         }
 
         .nav-btn.primary {
-            background: #2563eb;
+            background: #1a1a1a;
             color: white;
         }
 
         .nav-btn.primary:hover {
-            background: #1d4ed8;
+            background: #000000;
             transform: translateY(-1px);
         }
 
@@ -111,14 +113,14 @@
         }
 
         .nav-btn.secondary:hover {
-            background: #f3f4f6;
+            background: #f5f5f5;
         }
 
         .user-menu {
             display: none;
             align-items: center;
             gap: 0.5rem;
-            color: #2563eb;
+            color: #1a1a1a;
             font-weight: 600;
             cursor: pointer;
         }
@@ -180,25 +182,26 @@
         }
 
         .cta-btn.primary {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            background: #1a1a1a;
             color: white;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .cta-btn.primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            background: #000000;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
         .cta-btn.secondary {
             background: white;
-            color: #374151;
-            border: 2px solid #e5e7eb;
+            color: #1a1a1a;
+            border: 2px solid #1a1a1a;
         }
 
         .cta-btn.secondary:hover {
-            border-color: #2563eb;
-            color: #2563eb;
+            border-color: #000000;
+            color: #000000;
             transform: translateY(-2px);
         }
 
@@ -222,6 +225,9 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-items: center;
         }
 
         .category-card {
@@ -232,6 +238,8 @@
             transition: all 0.3s ease;
             cursor: pointer;
             border: 1px solid #e2e8f0;
+            width: 100%;
+            max-width: 300px;
         }
 
         .category-card:hover {
@@ -245,6 +253,7 @@
             margin-bottom: 1.5rem;
             display: block;
         }
+
 
         .category-card h3 {
             font-size: 1.3rem;
@@ -351,7 +360,7 @@
         .listing-price {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #2563eb;
+            color: #1a1a1a;
             margin-bottom: 1rem;
         }
 
@@ -394,12 +403,12 @@
         }
 
         .contact-btn.email {
-            background: #2563eb;
+            background: #1a1a1a;
             color: white;
         }
 
         .contact-btn.phone {
-            background: #10b981;
+            background: #666666;
             color: white;
         }
 
@@ -539,8 +548,8 @@
         }
 
         .form-input:focus {
-            border-color: #2563eb;
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+            border-color: #1a1a1a;
+            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
         }
 
         .form-textarea {
@@ -557,7 +566,7 @@
         .submit-btn {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            background: #1a1a1a;
             color: white;
             border: none;
             border-radius: 12px;
@@ -570,7 +579,8 @@
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            background: #000000;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
         .confirm-btn {
@@ -633,8 +643,8 @@
         }
 
         .auth-tab.active {
-            color: #2563eb;
-            border-bottom: 2px solid #2563eb;
+            color: #1a1a1a;
+            border-bottom: 2px solid #1a1a1a;
             margin-bottom: -2px;
         }
 
@@ -726,6 +736,48 @@
                 margin: 5% auto;
                 padding: 2rem;
             }
+            
+            .messaging-panel {
+                width: 100%;
+                right: -100%;
+                top: 60px;
+                height: calc(100vh - 60px);
+                border-radius: 0;
+            }
+            
+            .messaging-toggle {
+                right: 10px;
+                width: 45px;
+                height: 45px;
+                font-size: 0.7rem;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .category-card {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .category-card {
+                padding: 1.5rem;
+            }
+            
+            .listing-card {
+                margin: 0 0.5rem;
+            }
         }
 
         /* Animations */
@@ -742,6 +794,207 @@
 
         .fade-in {
             animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Messaging System Styles */
+        .messaging-panel {
+            position: fixed;
+            right: -400px;
+            top: 80px;
+            width: 380px;
+            height: calc(100vh - 100px);
+            background: #ffffff;
+            border: 2px solid #1a1a1a;
+            border-radius: 12px 0 0 12px;
+            z-index: 1500;
+            display: flex;
+            flex-direction: column;
+            transition: right 0.3s ease;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .messaging-panel.open {
+            right: 0;
+        }
+
+        .messaging-header {
+            padding: 20px;
+            border-bottom: 1px solid #e5e7eb;
+            background: #1a1a1a;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .messaging-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .message-close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .messages-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message-thread {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .message-thread:hover {
+            border-color: #1a1a1a;
+            background: #f5f5f5;
+        }
+
+        .message-thread.unread {
+            border-left: 4px solid #1a1a1a;
+        }
+
+        .thread-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .thread-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+        }
+
+        .thread-time {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .thread-preview {
+            color: #6b7280;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .message-compose {
+            border-top: 1px solid #e5e7eb;
+            padding: 20px;
+            background: #f9fafb;
+        }
+
+        .compose-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            resize: vertical;
+            min-height: 80px;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .compose-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .compose-info {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .send-btn {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .send-btn:hover {
+            background: #000000;
+        }
+
+        .send-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        .messaging-toggle {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .messaging-toggle:hover {
+            background: #000000;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .message-notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .empty-messages {
+            text-align: center;
+            color: #6b7280;
+            padding: 40px 20px;
+        }
+
+        .empty-messages h4 {
+            margin-bottom: 10px;
+            color: #374151;
         }
 
         /* Image Upload and Display Styles */
@@ -871,14 +1124,14 @@
         <div class="header-container">
             <a href="index.html" class="logo">BSR</a>
             <div class="search-container">
-                <span class="search-icon">🔍</span>
+                <span class="search-icon">⌕</span>
                 <input type="text" class="search-bar" placeholder="Search listings..." id="searchInput">
             </div>
             <nav class="nav-links">
-                <button class="nav-btn primary" id="postButton" onclick="checkAuthBeforePosting()">📝 Post Listing</button>
-                <a href="#" class="nav-btn secondary" id="myListingsButton" style="display: none;" onclick="showMyListings()">📋 My Listings</a>
-                <a href="#" class="nav-btn secondary" id="bookmarksButton" style="display: none;" onclick="showBookmarks()">❤️ Saved</a>
-                <a href="#" class="nav-btn secondary" id="loginButton" onclick="openModal('authModal')">👤 Sign In</a>
+                <button class="nav-btn primary" id="postButton" onclick="checkAuthBeforePosting()">Post Listing</button>
+                <a href="#" class="nav-btn secondary" id="myListingsButton" style="display: none;" onclick="showMyListings()">My Listings</a>
+                <a href="#" class="nav-btn secondary" id="bookmarksButton" style="display: none;" onclick="showBookmarks()">Saved</a>
+                <a href="#" class="nav-btn secondary" id="loginButton" onclick="openModal('authModal')">Sign Up</a>
                 <div class="user-menu" id="userMenu">
                     <span id="userName"></span>
                     <button class="nav-btn secondary" onclick="logout()">Logout</button>
@@ -905,32 +1158,26 @@
                 <h2 class="section-title">Browse Categories</h2>
                 <div class="category-grid">
                     <div class="category-card" onclick="filterByCategory('electronics')">
-                        <span class="category-icon">📱</span>
                         <h3>Electronics</h3>
                         <p>Phones, computers, gaming, and tech accessories</p>
                     </div>
                     <div class="category-card" onclick="filterByCategory('vehicles')">
-                        <span class="category-icon">🚗</span>
                         <h3>Vehicles</h3>
                         <p>Cars, motorcycles, bikes, and automotive parts</p>
                     </div>
                     <div class="category-card" onclick="filterByCategory('home')">
-                        <span class="category-icon">🏠</span>
                         <h3>Home & Garden</h3>
                         <p>Furniture, appliances, decor, and outdoor items</p>
                     </div>
                     <div class="category-card" onclick="filterByCategory('fashion')">
-                        <span class="category-icon">👔</span>
                         <h3>Fashion</h3>
                         <p>Clothing, shoes, accessories, and jewelry</p>
                     </div>
                     <div class="category-card" onclick="filterByCategory('sports')">
-                        <span class="category-icon">⚽</span>
                         <h3>Sports & Recreation</h3>
                         <p>Equipment, fitness gear, and outdoor activities</p>
                     </div>
                     <div class="category-card" onclick="filterByCategory('books')">
-                        <span class="category-icon">📚</span>
                         <h3>Books & Media</h3>
                         <p>Books, movies, music, and educational materials</p>
                     </div>
@@ -996,14 +1243,41 @@
         </div>
     </main>
 
+    <!-- Messaging System -->
+    <button class="messaging-toggle" id="messagingToggle" onclick="toggleMessaging()">
+        Messages
+        <span class="message-notification" id="messageNotification" style="display: none;">0</span>
+    </button>
+
+    <div class="messaging-panel" id="messagingPanel">
+        <div class="messaging-header">
+            <h3>Messages</h3>
+            <button class="message-close-btn" onclick="toggleMessaging()">&times;</button>
+        </div>
+        <div class="messages-container" id="messagesContainer">
+            <div class="empty-messages" id="emptyMessages">
+                <h4>No messages yet</h4>
+                <p>Start a conversation by messaging someone about their listing</p>
+            </div>
+        </div>
+        <div class="message-compose" id="messageCompose" style="display: none;">
+            <div class="compose-info" id="composeInfo">Compose new message</div>
+            <textarea class="compose-input" id="composeInput" placeholder="Type your message..."></textarea>
+            <div class="compose-actions">
+                <div class="compose-info" id="recipientInfo"></div>
+                <button class="send-btn" id="sendBtn" onclick="sendMessage()" disabled>Send</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Authentication Modal -->
     <div id="authModal" class="modal">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('authModal')">&times;</button>
             <div class="auth-container">
                 <div class="auth-tabs">
-                    <div class="auth-tab active" id="loginTab" onclick="switchAuthTab('login')">Login</div>
-                    <div class="auth-tab" id="registerTab" onclick="switchAuthTab('register')">Register</div>
+                    <div class="auth-tab active" id="loginTab" onclick="switchAuthTab('login')">Sign In</div>
+                    <div class="auth-tab" id="registerTab" onclick="switchAuthTab('register')">Sign Up</div>
                 </div>
                 
                 <!-- Login Form -->
@@ -1017,6 +1291,9 @@
                         <input type="password" class="form-input" id="loginPassword" required>
                     </div>
                     <button type="submit" class="submit-btn">Sign In</button>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <button type="button" class="nav-btn secondary" onclick="switchAuthTab('register')" style="width: auto; padding: 8px 16px;">Don't have an account? Sign Up</button>
+                    </div>
                 </form>
                 
                 <!-- Register Form -->
@@ -1030,6 +1307,10 @@
                         <input type="email" class="form-input" id="registerEmail" required>
                     </div>
                     <div class="form-group">
+                        <label class="form-label">Phone Number (Optional)</label>
+                        <input type="tel" class="form-input" id="registerPhone" placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="form-group">
                         <label class="form-label">Password</label>
                         <input type="password" class="form-input" id="registerPassword" required minlength="6">
                     </div>
@@ -1038,6 +1319,9 @@
                         <input type="password" class="form-input" id="registerConfirmPassword" required minlength="6">
                     </div>
                     <button type="submit" class="submit-btn">Create Account</button>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <button type="button" class="nav-btn secondary" onclick="switchAuthTab('login')" style="width: auto; padding: 8px 16px;">Already have an account? Sign In</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -1151,14 +1435,303 @@
         </div>
     </div>
 
+
     <script>
+        // Global account system with server-side storage
+        
         // User authentication
         let currentUser = JSON.parse(localStorage.getItem('bsrCurrentUser'));
-        let users = JSON.parse(localStorage.getItem('bsrUsers')) || [];
         
-        // Listings storage
-        let listings = JSON.parse(localStorage.getItem('bsrListings')) || [];
-        let filteredListings = [...listings];
+        // Global data storage
+        let listings = [];
+        let filteredListings = [];
+        let bookmarkedListings = [];
+        let users = [];
+        let messages = [];
+        
+        // API base URL
+        const API_BASE = window.location.origin;
+        
+        // Current conversation state
+        let currentRecipient = null;
+        let messagingOpen = false;
+        
+        
+        // Generate unique IDs
+        function generateId() {
+            return Date.now() + Math.random().toString(36).substr(2, 9);
+        }
+        
+        // Messaging System Functions
+        function toggleMessaging() {
+            const panel = document.getElementById('messagingPanel');
+            messagingOpen = !messagingOpen;
+            
+            if (messagingOpen) {
+                panel.classList.add('open');
+                loadMessages();
+            } else {
+                panel.classList.remove('open');
+            }
+        }
+        
+        function startMessage(recipient) {
+            if (!currentUser) {
+                showNotification('Please sign in to send messages', 'error');
+                return;
+            }
+            
+            if (currentUser.id === recipient.id) {
+                showNotification('You cannot message yourself', 'error');
+                return;
+            }
+            
+            currentRecipient = recipient;
+            
+            // Open messaging panel
+            if (!messagingOpen) {
+                toggleMessaging();
+            }
+            
+            // Show compose area
+            document.getElementById('messageCompose').style.display = 'block';
+            document.getElementById('recipientInfo').textContent = `To: ${recipient.name} (about: ${recipient.listing})`;
+            document.getElementById('composeInput').focus();
+            
+            // Pre-fill message
+            document.getElementById('composeInput').value = `Hi! I'm interested in your listing: "${recipient.listing}". `;
+            document.getElementById('sendBtn').disabled = false;
+        }
+        
+        async function sendMessage() {
+            if (!currentUser || !currentRecipient) return;
+            
+            const messageText = document.getElementById('composeInput').value.trim();
+            if (!messageText) {
+                showNotification('Please enter a message', 'error');
+                return;
+            }
+            
+            const newMessage = {
+                id: generateId(),
+                from_id: currentUser.id,
+                from_name: currentUser.name,
+                to_id: currentRecipient.id,
+                to_name: currentRecipient.name,
+                message: messageText,
+                listing_title: currentRecipient.listing,
+                timestamp: Date.now(),
+                read: false
+            };
+            
+            try {
+                await apiCall('/api/messages', {
+                    method: 'POST',
+                    body: JSON.stringify(newMessage)
+                });
+                
+                messages.push(newMessage);
+                
+                // Clear compose area
+                document.getElementById('composeInput').value = '';
+                document.getElementById('messageCompose').style.display = 'none';
+                currentRecipient = null;
+                
+                showNotification('Message sent!');
+                loadMessages();
+            } catch (error) {
+                showNotification('Failed to send message', 'error');
+            }
+        }
+        
+        function loadMessages() {
+            if (!currentUser) {
+                document.getElementById('messagesContainer').innerHTML = `
+                    <div class="empty-messages">
+                        <h4>Sign in required</h4>
+                        <p>Please sign in to view your messages</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Get messages for current user (both sent and received)
+            const userMessages = messages.filter(msg => 
+                msg.from_id === currentUser.id || msg.to_id === currentUser.id
+            );
+            
+            if (userMessages.length === 0) {
+                document.getElementById('messagesContainer').innerHTML = `
+                    <div class="empty-messages">
+                        <h4>No messages yet</h4>
+                        <p>Start a conversation by messaging someone about their listing</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Group messages by conversation (other user)
+            const conversations = {};
+            userMessages.forEach(msg => {
+                const otherUserId = msg.from_id === currentUser.id ? msg.to_id : msg.from_id;
+                const otherUserName = msg.from_id === currentUser.id ? msg.to_name : msg.from_name;
+                
+                if (!conversations[otherUserId]) {
+                    conversations[otherUserId] = {
+                        user_id: otherUserId,
+                        user_name: otherUserName,
+                        messages: [],
+                        unread: 0
+                    };
+                }
+                
+                conversations[otherUserId].messages.push(msg);
+                
+                // Count unread messages (received by current user)
+                if (msg.to_id === currentUser.id && !msg.read) {
+                    conversations[otherUserId].unread++;
+                }
+            });
+            
+            // Sort conversations by most recent message
+            const sortedConversations = Object.values(conversations).sort((a, b) => {
+                const lastMsgA = Math.max(...a.messages.map(m => m.timestamp));
+                const lastMsgB = Math.max(...b.messages.map(m => m.timestamp));
+                return lastMsgB - lastMsgA;
+            });
+            
+            // Update notification badge
+            const totalUnread = Object.values(conversations).reduce((sum, conv) => sum + conv.unread, 0);
+            const notificationBadge = document.getElementById('messageNotification');
+            if (totalUnread > 0) {
+                notificationBadge.textContent = totalUnread;
+                notificationBadge.style.display = 'flex';
+            } else {
+                notificationBadge.style.display = 'none';
+            }
+            
+            // Render conversations
+            const container = document.getElementById('messagesContainer');
+            container.innerHTML = '';
+            
+            sortedConversations.forEach(conversation => {
+                const lastMessage = conversation.messages[conversation.messages.length - 1];
+                const preview = lastMessage.message.length > 50 ? 
+                                lastMessage.message.substr(0, 50) + '...' : lastMessage.message;
+                const timeAgo = getTimeAgo(lastMessage.timestamp);
+                
+                const threadElement = document.createElement('div');
+                threadElement.className = `message-thread ${conversation.unread > 0 ? 'unread' : ''}`;
+                threadElement.onclick = () => openConversation(conversation);
+                
+                threadElement.innerHTML = `
+                    <div class="thread-header">
+                        <div class="thread-title">${conversation.user_name}</div>
+                        <div class="thread-time">${timeAgo}</div>
+                    </div>
+                    <div class="thread-preview">
+                        ${lastMessage.listing_title ? `Re: ${lastMessage.listing_title}<br>` : ''}
+                        <strong>${lastMessage.from_id === currentUser.id ? 'You: ' : ''}</strong>${preview}
+                    </div>
+                `;
+                
+                container.appendChild(threadElement);
+            });
+        }
+        
+        async function openConversation(conversation) {
+            // Mark messages as read
+            const messagesToMarkRead = [];
+            messages.forEach(msg => {
+                if (msg.to_id === currentUser.id && msg.from_id === conversation.user_id && !msg.read) {
+                    msg.read = true;
+                    messagesToMarkRead.push(msg.id);
+                }
+            });
+            
+            // Update read status on server
+            for (const messageId of messagesToMarkRead) {
+                try {
+                    await apiCall(`/api/messages/${messageId}/read`, { method: 'PUT' });
+                } catch (error) {
+                    console.error('Failed to mark message as read:', error);
+                }
+            }
+            
+            // For now, just show a preview of all messages in the conversation
+            const allMessages = conversation.messages.sort((a, b) => a.timestamp - b.timestamp);
+            let conversationPreview = `Conversation with ${conversation.user_name}:\n\n`;
+            
+            allMessages.forEach(msg => {
+                const sender = msg.from_id === currentUser.id ? 'You' : msg.from_name;
+                const time = new Date(msg.timestamp).toLocaleString();
+                conversationPreview += `[${time}] ${sender}: ${msg.message}\n\n`;
+            });
+            
+            alert(conversationPreview);
+            loadMessages(); // Refresh to update unread counts
+        }
+        
+        function getTimeAgo(timestamp) {
+            const now = Date.now();
+            const diff = now - timestamp;
+            const minutes = Math.floor(diff / (1000 * 60));
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            
+            if (minutes < 1) return 'Just now';
+            if (minutes < 60) return `${minutes}m ago`;
+            if (hours < 24) return `${hours}h ago`;
+            if (days < 7) return `${days}d ago`;
+            return new Date(timestamp).toLocaleDateString();
+        }
+        
+        // API Helper Functions
+        async function apiCall(endpoint, options = {}) {
+            try {
+                const response = await fetch(endpoint, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        ...options.headers
+                    },
+                    ...options
+                });
+                const data = await response.json();
+                if (!response.ok) {
+                    throw new Error(data.error || 'API request failed');
+                }
+                return data;
+            } catch (error) {
+                console.error('API Error:', error);
+                throw error;
+            }
+        }
+        
+        // Load data from server
+        async function loadGlobalData() {
+            try {
+                const [listingsRes, usersRes, messagesRes, bookmarksRes] = await Promise.all([
+                    apiCall('/api/listings'),
+                    apiCall('/api/users'),
+                    apiCall('/api/messages'),
+                    apiCall('/api/bookmarks')
+                ]);
+                
+                listings = listingsRes.listings || [];
+                users = usersRes.users || [];
+                messages = messagesRes.messages || [];
+                bookmarkedListings = bookmarksRes.bookmarks || [];
+                
+            } catch (error) {
+                console.error('Failed to load data from server:', error);
+                // Fall back to localStorage as backup
+                listings = JSON.parse(localStorage.getItem('bsrListings')) || [];
+                users = JSON.parse(localStorage.getItem('bsrUsers')) || [];
+                messages = JSON.parse(localStorage.getItem('bsrMessages')) || [];
+                bookmarkedListings = JSON.parse(localStorage.getItem('bsrBookmarks')) || [];
+                showNotification('Using offline mode - data may not sync with other devices', 'error');
+            }
+        }
 
         // Check authentication status and update UI
         function updateAuthUI() {
@@ -1205,61 +1778,137 @@
             }
         }
 
-        // Login function
-        function login(email, password) {
-            const user = users.find(u => u.email === email && u.password === password);
-            if (user) {
-                currentUser = {
-                    id: user.id,
-                    name: user.name,
-                    email: user.email
-                };
-                localStorage.setItem('bsrCurrentUser', JSON.stringify(currentUser));
-                updateAuthUI();
-                closeModal('authModal');
-                showNotification('Logged in successfully!');
-                return true;
+        // Hash password (simple implementation for demo)
+        function hashPassword(password) {
+            // Simple hash function for demo purposes
+            let hash = 0;
+            for (let i = 0; i < password.length; i++) {
+                const char = password.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash; // Convert to 32-bit integer
             }
-            return false;
+            return hash.toString();
+        }
+
+        
+        // Login function
+        async function login(email, password) {
+            try {
+                const response = await fetch(`${API_BASE}/api/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    currentUser = data.user;
+                    localStorage.setItem('bsrCurrentUser', JSON.stringify(currentUser));
+                    updateAuthUI();
+                    closeModal('authModal');
+                    showNotification('Logged in successfully!');
+                    await loadGlobalData();
+                    displayListings();
+                    return true;
+                } else {
+                    showNotification('Invalid email or password', 'error');
+                    return false;
+                }
+            } catch (error) {
+                // Fallback to local storage if server is unavailable
+                const localUsers = JSON.parse(localStorage.getItem('bsrUsers')) || [];
+                const user = localUsers.find(u => u.email === email && u.password === password);
+                if (user) {
+                    currentUser = { id: user.id, name: user.name, email: user.email, phone: user.phone };
+                    localStorage.setItem('bsrCurrentUser', JSON.stringify(currentUser));
+                    updateAuthUI();
+                    closeModal('authModal');
+                    showNotification('Logged in successfully!');
+                    await loadGlobalData();
+                    displayListings();
+                    return true;
+                }
+                showNotification('Invalid email or password', 'error');
+                return false;
+            }
         }
 
         // Register function
-        function register(name, email, password) {
-            if (users.some(u => u.email === email)) {
-                showNotification('Email already registered', 'error');
-                return false;
+        async function register(name, email, password) {
+            try {
+                const response = await fetch(`${API_BASE}/api/users`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: Date.now(),
+                        name: name,
+                        email: email,
+                        password: password
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Auto-login the user
+                    currentUser = { id: data.user.id, name: data.user.name, email: data.user.email };
+                    localStorage.setItem('bsrCurrentUser', JSON.stringify(currentUser));
+                    updateAuthUI();
+                    closeModal('authModal');
+                    showNotification('Account created successfully!');
+                    await loadGlobalData();
+                    displayListings();
+                    return true;
+                } else {
+                    showNotification(data.error || 'Registration failed', 'error');
+                    return false;
+                }
+            } catch (error) {
+                // Fallback to local storage if server is unavailable
+                const localUsers = JSON.parse(localStorage.getItem('bsrUsers')) || [];
+                if (localUsers.some(u => u.email === email)) {
+                    showNotification('Email already registered', 'error');
+                    return false;
+                }
+                
+                const newUser = {
+                    id: Date.now(),
+                    name: name,
+                    email: email,
+                    password: password
+                };
+                
+                localUsers.push(newUser);
+                localStorage.setItem('bsrUsers', JSON.stringify(localUsers));
+                
+                // Auto-login the user
+                currentUser = { id: newUser.id, name: newUser.name, email: newUser.email };
+                localStorage.setItem('bsrCurrentUser', JSON.stringify(currentUser));
+                updateAuthUI();
+                closeModal('authModal');
+                showNotification('Account created successfully!');
+                await loadGlobalData();
+                displayListings();
+                return true;
             }
-            
-            const newUser = {
-                id: Date.now(),
-                name,
-                email,
-                password
-            };
-            
-            users.push(newUser);
-            localStorage.setItem('bsrUsers', JSON.stringify(users));
-            
-            // Auto login after registration
-            currentUser = {
-                id: newUser.id,
-                name: newUser.name,
-                email: newUser.email
-            };
-            localStorage.setItem('bsrCurrentUser', JSON.stringify(currentUser));
-            
-            updateAuthUI();
-            closeModal('authModal');
-            showNotification('Account created successfully!');
-            return true;
         }
 
+        
         // Logout function
         function logout() {
             currentUser = null;
             localStorage.removeItem('bsrCurrentUser');
             updateAuthUI();
             showNotification('Logged out');
+            loadListings();
             showMainListings();
         }
 
@@ -1287,21 +1936,103 @@
             }
         }
 
-        // Filter out expired listings
-        function filterExpiredListings() {
+        // Load listings with filtering and sorting
+        function loadListings(filters = {}) {
+            // First, remove expired listings from the main array
             const now = Date.now();
+            const originalLength = listings.length;
             listings = listings.filter(listing => {
                 const expiryTime = listing.timestamp + (listing.duration * 60 * 60 * 1000);
                 return now < expiryTime;
             });
-            localStorage.setItem('bsrListings', JSON.stringify(listings));
+            
+            // If any listings were removed, update server
+            if (listings.length !== originalLength) {
+                // Remove expired listings from server
+                const expiredListings = [];
+                const now = Date.now();
+                listings.forEach(listing => {
+                    const expiryTime = listing.timestamp + (listing.duration * 60 * 60 * 1000);
+                    if (now >= expiryTime) {
+                        expiredListings.push(listing.id);
+                    }
+                });
+                
+                expiredListings.forEach(async (listingId) => {
+                    try {
+                        await apiCall(`/api/listings/${listingId}`, { method: 'DELETE' });
+                    } catch (error) {
+                        console.error('Failed to delete expired listing:', error);
+                    }
+                });
+            }
+            
+            // Start with all non-expired listings
+            let result = [...listings];
+            
+            // Apply user filter
+            if (filters.user_id) {
+                result = result.filter(listing => listing.user_id == filters.user_id);
+            }
+            
+            // Apply category filter
+            if (filters.category) {
+                result = result.filter(listing => listing.category === filters.category);
+            }
+            
+            // Apply type filter
+            if (filters.type) {
+                result = result.filter(listing => listing.type === filters.type);
+            }
+            
+            // Apply search filter
+            if (filters.search) {
+                const searchTerm = filters.search.toLowerCase();
+                result = result.filter(listing => 
+                    listing.title.toLowerCase().includes(searchTerm) ||
+                    listing.description.toLowerCase().includes(searchTerm) ||
+                    listing.location.toLowerCase().includes(searchTerm)
+                );
+            }
+            
+            // Calculate expiry for each listing (should all be non-expired now)
+            result = result.map(listing => ({
+                ...listing,
+                expiry: calculateExpiry(listing)
+            }));
+            
+            // Apply sorting
+            if (filters.sort) {
+                switch (filters.sort) {
+                    case 'newest':
+                        result.sort((a, b) => b.timestamp - a.timestamp);
+                        break;
+                    case 'oldest':
+                        result.sort((a, b) => a.timestamp - b.timestamp);
+                        break;
+                    case 'price-low':
+                        result.sort((a, b) => a.price - b.price);
+                        break;
+                    case 'price-high':
+                        result.sort((a, b) => b.price - a.price);
+                        break;
+                    case 'expiry':
+                        result.sort((a, b) => {
+                            return a.timestamp + (a.duration * 60 * 60 * 1000) - (b.timestamp + (b.duration * 60 * 60 * 1000));
+                        });
+                        break;
+                    default:
+                        result.sort((a, b) => b.timestamp - a.timestamp);
+                }
+            } else {
+                result.sort((a, b) => b.timestamp - a.timestamp);
+            }
+            
+            filteredListings = result;
         }
 
         // Display listings
-        function displayListings() {
-            // First filter out expired listings
-            filterExpiredListings();
-            
+        async function displayListings() {
             const grid = document.getElementById('listingsGrid');
             
             if (filteredListings.length === 0) {
@@ -1317,9 +2048,6 @@
 
             grid.innerHTML = '';
             filteredListings.forEach((listing, index) => {
-                const expiry = calculateExpiry(listing);
-                if (expiry.expired) return; // Skip expired listings
-                
                 const listingCard = document.createElement('div');
                 listingCard.className = 'listing-card fade-in';
                 listingCard.style.animationDelay = `${index * 0.1}s`;
@@ -1330,25 +2058,33 @@
                 const typeText = listing.type === 'buy' ? 'wanted' : listing.type;
                 
                 // Check if current user is the owner
-                const isOwner = currentUser && listing.userId === currentUser.id;
+                const isOwner = currentUser && listing.user_id == currentUser.id;
                 const isBookmarkedListing = currentUser && isBookmarked(listing.id);
                 
                 // Create the owner controls if needed
                 const ownerControls = isOwner ? `
                     <div class="owner-actions">
-                        <button class="owner-btn" title="Delete listing" onclick="deleteListing(${listing.id})">🗑️</button>
+                        <button class="owner-btn" title="Delete listing" onclick="deleteListing(${listing.id})">Delete</button>
                     </div>
-                ` : `
+                ` : `   
                     <div class="owner-actions">
-                        <button class="owner-btn" title="${isBookmarkedListing ? 'Remove bookmark' : 'Bookmark'}" onclick="toggleBookmark(${listing.id})">${isBookmarkedListing ? '❤️' : '🤍'}</button>
-                        <button class="owner-btn" title="Report listing" onclick="reportListing(${listing.id})">⚠️</button>
+                        <button class="owner-btn" title="${isBookmarkedListing ? 'Remove bookmark' : 'Bookmark'}" onclick="toggleBookmark(${listing.id})">${isBookmarkedListing ? 'Saved' : 'Save'}</button>
+                        <button class="owner-btn" title="Report listing" onclick="reportListing(${listing.id})">Report</button>
                     </div>
                 `;
                 
                 listingCard.setAttribute('data-listing-id', listing.id);
                 
+                // Prepare listing data for contact seller
+                const contactData = {
+                    title: listing.title,
+                    price: listing.price,
+                    name: listing.user_name,
+                    email: listing.user_email
+                };
+                
                 listingCard.innerHTML = `
-                    <div class="expiry-badge">${expiry.display}</div>
+                    <div class="expiry-badge">${listing.expiry.display}</div>
                     ${ownerControls}
                     ${createImageCarousel(listing.images, listing.id)}
                     <div class="listing-content">
@@ -1357,12 +2093,13 @@
                         <div class="listing-price">${priceText}</div>
                         <p class="listing-description">${listing.description}</p>
                         <div class="contact-buttons">
-                            ${listing.phone ? `<a href="tel:${listing.phone}" class="contact-btn phone">📞 Call</a>` : ''}
-                            <button class="contact-btn email" onclick="contactSeller(${JSON.stringify(listing).replace(/"/g, '&quot;')})">✉️ Email</button>
+                            ${listing.phone ? `<a href="tel:${listing.phone}" class="contact-btn phone">Call</a>` : ''}
+                            <button class="contact-btn email" onclick='contactSeller(${JSON.stringify(contactData)})'>Email</button>
+                            <button class="contact-btn email" onclick='startMessage(${JSON.stringify({id: listing.user_id, name: listing.user_name, listing: listing.title})})'>Message</button>
                         </div>
                         <div class="listing-meta">
-                            <span class="listing-location">📍 ${listing.location}</span>
-                            <span>📅 ${listing.posted}</span>
+                            <span class="listing-location">${listing.location}</span>
+                            <span>${listing.posted}</span>
                         </div>
                     </div>
                 `;
@@ -1374,19 +2111,17 @@
         function displayMyListings() {
             if (!currentUser) return;
             
-            // First filter out expired listings
-            filterExpiredListings();
+            loadListings({ user_id: currentUser.id });
             
             const grid = document.getElementById('myListingsGrid');
             const statsDiv = document.getElementById('listingStats');
             
-            // Filter listings by current user
-            const myListings = listings.filter(listing => listing.userId === currentUser.id);
+            const myListings = filteredListings;
             
             // Update stats
             const stats = getListingStats();
             if (stats) {
-                statsDiv.innerHTML = `📊 Total: ${stats.total} | ✅ Active: ${stats.active} | ⏰ Expired: ${stats.expired}`;
+                statsDiv.innerHTML = `Total: ${stats.total} | Active: ${stats.active}`;
             }
             
             if (myListings.length === 0) {
@@ -1402,8 +2137,6 @@
 
             grid.innerHTML = '';
             myListings.forEach((listing, index) => {
-                const expiry = calculateExpiry(listing);
-                
                 const listingCard = document.createElement('div');
                 listingCard.className = 'listing-card fade-in';
                 listingCard.style.animationDelay = `${index * 0.1}s`;
@@ -1413,15 +2146,15 @@
                 
                 const typeText = listing.type === 'buy' ? 'wanted' : listing.type;
                 
-                const statusClass = expiry.expired ? 'type-buy' : 'type-' + listing.type;
-                const statusText = expiry.expired ? 'EXPIRED' : typeText;
+                const statusClass = 'type-' + listing.type;
+                const statusText = typeText;
                 
                 listingCard.setAttribute('data-listing-id', listing.id);
                 
                 listingCard.innerHTML = `
-                    <div class="expiry-badge">${expiry.display}</div>
+                    <div class="expiry-badge">${listing.expiry.display}</div>
                     <div class="owner-actions">
-                        <button class="owner-btn" title="Delete listing" onclick="deleteListing(${listing.id})">🗑️</button>
+                        <button class="owner-btn" title="Delete listing" onclick="deleteListing(${listing.id})">Delete</button>
                     </div>
                     ${createImageCarousel(listing.images, listing.id)}
                     <div class="listing-content">
@@ -1430,8 +2163,8 @@
                         <div class="listing-price">${priceText}</div>
                         <p class="listing-description">${listing.description}</p>
                         <div class="listing-meta">
-                            <span class="listing-location">📍 ${listing.location}</span>
-                            <span>📅 ${listing.posted}</span>
+                            <span class="listing-location">${listing.location}</span>
+                            <span>${listing.posted}</span>
                         </div>
                     </div>
                 `;
@@ -1445,10 +2178,20 @@
             
             const grid = document.getElementById('bookmarksGrid');
             
-            // Get user's bookmarked listings
-            const userBookmarks = bookmarkedListings.filter(b => b.startsWith(`${currentUser.id}-`));
-            const bookmarkedIds = userBookmarks.map(b => parseInt(b.split('-')[1]));
-            const bookmarkedListingObjects = listings.filter(l => bookmarkedIds.includes(l.id));
+            // Get bookmarked listing IDs for current user
+            const userBookmarks = bookmarkedListings.filter(bookmark => bookmark.user_id === currentUser.id);
+            
+            // Get the actual listing objects
+            const bookmarkedListingObjects = userBookmarks.map(bookmark => {
+                const listing = listings.find(l => l.id === bookmark.listing_id);
+                if (listing) {
+                    return {
+                        ...listing,
+                        expiry: calculateExpiry(listing)
+                    };
+                }
+                return null;
+            }).filter(listing => listing !== null);
             
             if (bookmarkedListingObjects.length === 0) {
                 grid.innerHTML = `
@@ -1463,9 +2206,6 @@
 
             grid.innerHTML = '';
             bookmarkedListingObjects.forEach((listing, index) => {
-                const expiry = calculateExpiry(listing);
-                if (expiry.expired) return; // Skip expired listings
-                
                 const listingCard = document.createElement('div');
                 listingCard.className = 'listing-card fade-in';
                 listingCard.style.animationDelay = `${index * 0.1}s`;
@@ -1477,10 +2217,17 @@
                 
                 listingCard.setAttribute('data-listing-id', listing.id);
                 
+                const contactData = {
+                    title: listing.title,
+                    price: listing.price,
+                    name: listing.user_name,
+                    email: listing.user_email
+                };
+                
                 listingCard.innerHTML = `
-                    <div class="expiry-badge">${expiry.display}</div>
+                    <div class="expiry-badge">${listing.expiry.display}</div>
                     <div class="owner-actions">
-                        <button class="owner-btn" title="Remove bookmark" onclick="toggleBookmark(${listing.id})">❤️</button>
+                        <button class="owner-btn" title="Remove bookmark" onclick="toggleBookmark(${listing.id})">Saved</button>
                     </div>
                     ${createImageCarousel(listing.images, listing.id)}
                     <div class="listing-content">
@@ -1489,12 +2236,12 @@
                         <div class="listing-price">${priceText}</div>
                         <p class="listing-description">${listing.description}</p>
                         <div class="contact-buttons">
-                            ${listing.phone ? `<a href="tel:${listing.phone}" class="contact-btn phone">📞 Call</a>` : ''}
-                            <button class="contact-btn email" onclick="contactSeller(${JSON.stringify(listing).replace(/"/g, '&quot;')})">✉️ Email</button>
+                            ${listing.phone ? `<a href="tel:${listing.phone}" class="contact-btn phone">Call</a>` : ''}
+                            <button class="contact-btn email" onclick='contactSeller(${JSON.stringify(contactData)})'>Email</button>
                         </div>
                         <div class="listing-meta">
-                            <span class="listing-location">📍 ${listing.location}</span>
-                            <span>📅 ${listing.posted}</span>
+                            <span class="listing-location">${listing.location}</span>
+                            <span>${listing.posted}</span>
                         </div>
                     </div>
                 `;
@@ -1504,6 +2251,17 @@
 
         // Show bookmarks section
         function showBookmarks() {
+            // Check if user is authenticated
+            if (!currentUser) {
+                openModal('authRequiredModal');
+                return;
+            }
+            
+            // Hide hero and categories sections
+            document.querySelector('.hero').style.display = 'none';
+            document.querySelector('.categories').style.display = 'none';
+            
+            // Show/hide main sections
             document.getElementById('mainListings').style.display = 'none';
             document.getElementById('myListingsSection').style.display = 'none';
             document.getElementById('bookmarksSection').style.display = 'block';
@@ -1512,31 +2270,33 @@
 
         // Filter functions
         function filterByCategory(category) {
+            // Scroll to listings section
+            document.getElementById('mainListings').scrollIntoView({ behavior: 'smooth' });
+            
+            // Set the filter dropdown
             document.getElementById('categoryFilter').value = category;
+            
+            // Apply the filter
             applyFilters();
         }
 
         function applyFilters() {
             const category = document.getElementById('categoryFilter').value;
             const type = document.getElementById('typeFilter').value;
+            const sort = document.getElementById('sortFilter').value;
             
-            filteredListings = listings.filter(listing => {
-                return (!category || listing.category === category) &&
-                       (!type || listing.type === type);
-            });
-            
+            loadListings({ category, type, sort });
             displayListings();
         }
 
         // Search function
         function searchListings() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            filteredListings = listings.filter(listing => 
-                listing.title.toLowerCase().includes(searchTerm) ||
-                listing.description.toLowerCase().includes(searchTerm) ||
-                listing.category.toLowerCase().includes(searchTerm) ||
-                listing.location.toLowerCase().includes(searchTerm)
-            );
+            const searchTerm = document.getElementById('searchInput').value;
+            const category = document.getElementById('categoryFilter').value;
+            const type = document.getElementById('typeFilter').value;
+            const sort = document.getElementById('sortFilter').value;
+            
+            loadListings({ search: searchTerm, category, type, sort });
             displayListings();
         }
 
@@ -1567,12 +2327,29 @@
 
         // View control functions
         function showMyListings() {
+            // Check if user is authenticated
+            if (!currentUser) {
+                openModal('authRequiredModal');
+                return;
+            }
+            
+            // Hide hero and categories sections
+            document.querySelector('.hero').style.display = 'none';
+            document.querySelector('.categories').style.display = 'none';
+            
+            // Show/hide main sections
             document.getElementById('mainListings').style.display = 'none';
             document.getElementById('myListingsSection').style.display = 'block';
+            document.getElementById('bookmarksSection').style.display = 'none';
             displayMyListings();
         }
 
         function showMainListings() {
+            // Show hero and categories sections
+            document.querySelector('.hero').style.display = 'block';
+            document.querySelector('.categories').style.display = 'block';
+            
+            // Show/hide main sections
             document.getElementById('mainListings').style.display = 'block';
             document.getElementById('myListingsSection').style.display = 'none';
             document.getElementById('bookmarksSection').style.display = 'none';
@@ -1580,72 +2357,60 @@
 
         // Enhanced sorting and view options
         function sortListings(sortBy) {
-            switch(sortBy) {
-                case 'newest':
-                    filteredListings.sort((a, b) => b.timestamp - a.timestamp);
-                    break;
-                case 'oldest':
-                    filteredListings.sort((a, b) => a.timestamp - b.timestamp);
-                    break;
-                case 'price-low':
-                    filteredListings.sort((a, b) => a.price - b.price);
-                    break;
-                case 'price-high':
-                    filteredListings.sort((a, b) => b.price - a.price);
-                    break;
-                case 'expiry':
-                    filteredListings.sort((a, b) => {
-                        const expiryA = a.timestamp + (a.duration * 60 * 60 * 1000);
-                        const expiryB = b.timestamp + (b.duration * 60 * 60 * 1000);
-                        return expiryA - expiryB;
-                    });
-                    break;
-            }
+            const category = document.getElementById('categoryFilter').value;
+            const type = document.getElementById('typeFilter').value;
+            const search = document.getElementById('searchInput').value;
+            
+            loadListings({ category, type, search, sort: sortBy });
             displayListings();
         }
 
         // Enhanced analytics for user listings
         function getListingStats() {
-            if (!currentUser) return null;
-            const userListings = listings.filter(l => l.userId === currentUser.id);
-            const activeListings = userListings.filter(l => {
-                const expiry = calculateExpiry(l);
-                return !expiry.expired;
-            });
+            if (!currentUser || !filteredListings) return null;
+            const userListings = filteredListings;
             
             return {
                 total: userListings.length,
-                active: activeListings.length,
-                expired: userListings.length - activeListings.length,
+                active: userListings.length,
                 categories: [...new Set(userListings.map(l => l.category))]
             };
         }
 
         // Bookmark system
-        let bookmarkedListings = JSON.parse(localStorage.getItem('bsrBookmarks')) || [];
-        
         function toggleBookmark(listingId) {
             if (!currentUser) {
                 showNotification('Please sign in to bookmark listings', 'error');
                 return;
             }
             
-            const bookmarkKey = `${currentUser.id}-${listingId}`;
-            const bookmarkIndex = bookmarkedListings.findIndex(b => b === bookmarkKey);
+            // Check if listing is already bookmarked
+            const existingBookmarkIndex = bookmarkedListings.findIndex(
+                bookmark => bookmark.user_id === currentUser.id && bookmark.listing_id === listingId
+            );
             
-            if (bookmarkIndex > -1) {
-                bookmarkedListings.splice(bookmarkIndex, 1);
-                showNotification('Removed from bookmarks');
+            if (existingBookmarkIndex > -1) {
+                // Remove bookmark
+                bookmarkedListings.splice(existingBookmarkIndex, 1);
+                showNotification('Bookmark removed');
             } else {
-                bookmarkedListings.push(bookmarkKey);
-                showNotification('Added to bookmarks');
+                // Add bookmark
+                bookmarkedListings.push({
+                    user_id: currentUser.id,
+                    listing_id: listingId,
+                    timestamp: Date.now()
+                });
+                showNotification('Listing bookmarked');
             }
             
-            localStorage.setItem('bsrBookmarks', JSON.stringify(bookmarkedListings));
+            // Save to localStorage
+            saveData();
             
             // Refresh the current view to update bookmark icons
             if (document.getElementById('myListingsSection').style.display === 'block') {
                 displayMyListings();
+            } else if (document.getElementById('bookmarksSection').style.display === 'block') {
+                displayBookmarks();
             } else {
                 displayListings();
             }
@@ -1653,8 +2418,9 @@
         
         function isBookmarked(listingId) {
             if (!currentUser) return false;
-            const bookmarkKey = `${currentUser.id}-${listingId}`;
-            return bookmarkedListings.includes(bookmarkKey);
+            return bookmarkedListings.some(
+                bookmark => bookmark.user_id === currentUser.id && bookmark.listing_id === listingId
+            );
         }
 
         // Contact seller with pre-filled message
@@ -1736,7 +2502,7 @@
 
         function createImageCarousel(images, listingId) {
             if (!images || images.length === 0) {
-                return '<div class="listing-image">📷</div>';
+                return '<div class="listing-image">Image</div>';
             }
             
             if (images.length === 1) {
@@ -1783,46 +2549,60 @@
             openModal('deleteModal');
         }
 
-        function confirmDeleteListing() {
+        async function confirmDeleteListing() {
             const listingId = parseInt(document.getElementById('deleteListingId').value);
-            listings = listings.filter(listing => listing.id !== listingId);
-            localStorage.setItem('bsrListings', JSON.stringify(listings));
-            filteredListings = [...listings];
             
-            closeModal('deleteModal');
-            
-            // Refresh the current view
-            if (document.getElementById('myListingsSection').style.display === 'block') {
-                displayMyListings();
-            } else {
-                displayListings();
+            try {
+                await apiCall(`/api/listings/${listingId}`, { method: 'DELETE' });
+                
+                // Find and remove the listing from the local array
+                const listingIndex = listings.findIndex(listing => listing.id === listingId);
+                if (listingIndex > -1) {
+                    listings.splice(listingIndex, 1);
+                }
+                
+                // Remove any bookmarks for this listing
+                bookmarkedListings = bookmarkedListings.filter(bookmark => bookmark.listing_id !== listingId);
+                
+                closeModal('deleteModal');
+                showNotification('Listing deleted successfully');
+                
+                // Refresh the current view
+                if (document.getElementById('myListingsSection').style.display === 'block') {
+                    displayMyListings();
+                } else {
+                    loadListings();
+                    displayListings();
+                }
+            } catch (error) {
+                closeModal('deleteModal');
+                showNotification('Failed to delete listing', 'error');
             }
-            
-            showNotification('Listing deleted successfully');
         }
 
         // Event Listeners
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', async function() {
             // Initialize UI based on authentication status
             updateAuthUI();
             
-            // Check for expired listings and display
-            filterExpiredListings();
+            // Load global data from server
+            await loadGlobalData();
+            
+            // Load and display listings
+            loadListings();
             displayListings();
             
             // Login form submission
-            document.getElementById('loginForm').addEventListener('submit', function(e) {
+            document.getElementById('loginForm').addEventListener('submit', async function(e) {
                 e.preventDefault();
                 const email = document.getElementById('loginEmail').value;
                 const password = document.getElementById('loginPassword').value;
                 
-                if (!login(email, password)) {
-                    showNotification('Invalid email or password', 'error');
-                }
+                await login(email, password);
             });
             
             // Register form submission
-            document.getElementById('registerForm').addEventListener('submit', function(e) {
+            document.getElementById('registerForm').addEventListener('submit', async function(e) {
                 e.preventDefault();
                 const name = document.getElementById('registerName').value;
                 const email = document.getElementById('registerEmail').value;
@@ -1834,14 +2614,15 @@
                     return;
                 }
                 
-                register(name, email, password);
+                await register(name, email, password);
             });
+            
             
             // Image upload event listener
             document.getElementById('postImages').addEventListener('change', handleImageSelection);
 
             // Post listing form submission
-            document.getElementById('postForm').addEventListener('submit', function(e) {
+            document.getElementById('postForm').addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
                 if (!currentUser) {
@@ -1856,28 +2637,38 @@
                                     duration <= 72 ? '3 days' : 
                                     duration <= 168 ? '7 days' : '14 days';
                 
+                const now = Date.now();
                 const newListing = {
-                    id: Date.now(),
+                    id: generateId(),
+                    user_id: currentUser.id,
+                    user_name: currentUser.name,
+                    user_email: currentUser.email,
                     title: document.getElementById('postTitle').value,
-                    price: parseFloat(document.getElementById('postPrice').value),
-                    type: document.getElementById('postType').value,
-                    category: document.getElementById('postCategory').value,
                     description: document.getElementById('postDescription').value,
+                    price: parseFloat(document.getElementById('postPrice').value),
+                    category: document.getElementById('postCategory').value,
+                    type: document.getElementById('postType').value,
                     location: document.getElementById('postLocation').value,
                     phone: document.getElementById('postPhone').value,
-                    email: currentUser.email,
-                    name: currentUser.name,
-                    userId: currentUser.id,
-                    posted: 'Just now',
-                    timestamp: Date.now(),
-                    duration: duration, // Duration in hours
-                    images: [...selectedImages] // Store the selected images
+                    duration: duration,
+                    images: selectedImages.map(img => ({ data: img.data, name: img.name })),
+                    timestamp: now,
+                    posted: new Date(now).toLocaleDateString()
                 };
                 
-                listings.unshift(newListing);
-                localStorage.setItem('bsrListings', JSON.stringify(listings));
-                filteredListings = [...listings];
-                displayListings();
+                // Add to server
+                try {
+                    await apiCall('/api/listings', {
+                        method: 'POST',
+                        body: JSON.stringify(newListing)
+                    });
+                    
+                    listings.push(newListing);
+                } catch (error) {
+                    showNotification('Failed to post listing', 'error');
+                    return;
+                }
+                
                 closeModal('postModal');
                 this.reset();
                 
@@ -1886,6 +2677,10 @@
                 updateImagePreview();
                 
                 showNotification(`Listing posted successfully! It will expire in ${durationText}.`);
+                
+                // Refresh listings
+                loadListings();
+                displayListings();
             });
             
             // Search functionality
@@ -1895,15 +2690,23 @@
             document.getElementById('categoryFilter').addEventListener('change', applyFilters);
             document.getElementById('typeFilter').addEventListener('change', applyFilters);
             
-            // Set up periodic checking for expired listings (every minute)
+            // Message compose listener
+            document.getElementById('composeInput').addEventListener('input', function() {
+                const sendBtn = document.getElementById('sendBtn');
+                sendBtn.disabled = this.value.trim() === '';
+            });
+            
+            // Set up periodic refresh (every 5 minutes)
             setInterval(() => {
-                filterExpiredListings();
                 if (document.getElementById('myListingsSection').style.display === 'block') {
                     displayMyListings();
+                } else if (document.getElementById('bookmarksSection').style.display === 'block') {
+                    displayBookmarks();
                 } else {
+                    loadListings();
                     displayListings();
                 }
-            }, 60000);
+            }, 300000);
         });
 
         // Close modal on outside click
@@ -1914,5 +2717,6 @@
             }
         }
     </script>
+    
 </body>
 </html>
